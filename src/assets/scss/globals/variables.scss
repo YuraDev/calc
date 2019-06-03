@@ -35,9 +35,7 @@ $breakpoints: (
     'xl' : (min-width: $screen-xl)
 ) !default;
 
-
 $grid-columns: 24;
-// $grid-breakpoints: $breakpoints;
 $grid-breakpoints: map-keys($breakpoints);
 
 /* Body

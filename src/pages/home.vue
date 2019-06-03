@@ -75,9 +75,9 @@ export default {
     roundOpts: [{
       key: 1, value: 'Не округлять'
     }, {
-      key: 2, value: 'Округлить к большему'
+      key: 2, value: 'Округлить к меньшему'
     }, {
-      key: 3, value: 'Округлить к меньшему'
+      key: 3, value: 'Округлить к большему'
     }]
   }),
   computed: {
