@@ -1,0 +1,44 @@
+// Grid
+@include block(row) {
+    position: relative;
+    box-sizing: border-box;
+    @include clearfix;
+    &--flex {
+        display: flex;
+        &:before,
+        &:after {
+            display: none;
+        }
+        &.is-justify-center {
+            justify-content: center;
+        }
+        &.is-justify-end {
+            justify-content: flex-end;
+        }
+        &.is-justify-space-between {
+            justify-content: space-between;
+        }
+        &.is-justify-space-around {
+            justify-content: space-around;
+        }
+
+        &.is-align-middle {
+            align-items: center;
+        }
+        &.is-align-bottom {
+            align-items: flex-end;
+        }
+    }
+}
+
+
+@for $i from 0 through length($grid-breakpoints) {
+    @if $i == 0 {
+        @include make-grid-columns()
+    } @else {
+        $name: nth($grid-breakpoints, $i);
+        @include res($name, $breakpoints) {
+            @include  make-grid-columns(-#{$name})
+        }
+    }
+}

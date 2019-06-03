@@ -20,6 +20,26 @@ $blue-2: #E6F2FE !default;
 -------------------------- */
 $font-ubuntu: 'Ubuntu', Helvetica, Arial, sans-serif;
 
+/* Break-point
+-------------------------- */
+$screen-sm: 600px !default;
+$screen-md: 900px !default;
+$screen-lg: 1200px !default;
+$screen-xl: 1900px !default;
+
+$breakpoints: (
+    'xs' : (min-width: 0),
+    'sm' : (min-width: $screen-sm),
+    'md' : (min-width: $screen-md),
+    'lg' : (min-width: $screen-lg),
+    'xl' : (min-width: $screen-xl)
+) !default;
+
+
+$grid-columns: 24;
+// $grid-breakpoints: $breakpoints;
+$grid-breakpoints: map-keys($breakpoints);
+
 /* Body
 -------------------------- */
 $body__color:                           $dark !default;
