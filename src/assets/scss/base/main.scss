@@ -1,0 +1,45 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body, html, #app {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: $body__background; 
+  color: $body__color;
+  font-family: $body__font-family;
+}
+
+.clearfix {
+  @include clearfix
+}
+/*-=========================-*/
+.wrap {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.slidebar {
+  width: 300px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  padding-top: 30px;
+}
+.content {
+  padding-top: 30px;
+  padding-left: 340px;
+  padding-bottom: 100px;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 100%;
+  padding: 30px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background: #fff;
+  @include shadow;
+}

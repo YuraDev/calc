@@ -1,0 +1,11 @@
+.martingale {
+    .ui-radio {
+      margin-right: 0;
+      &:first-child {
+          float: left;
+      }
+      &:last-child {
+          float: right;
+      }
+    }
+}

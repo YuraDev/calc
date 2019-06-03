@@ -1,0 +1,62 @@
+@mixin shadow {
+    transition: box-shadow ease .2s;
+    box-shadow: 0 25px 50px rgba(8,21,66,.06);
+    &:hover {
+        box-shadow: 0 5px 12px rgba(126,142,177,.2);
+    }
+};
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: '';
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+};
+/* Block
+ -------------------------- */
+@mixin block($block) {
+    $B: $namespace+'-'+$block !global;
+    .#{$B} {
+        @content;
+    }
+}
+
+// @mixin for-small {
+//     @media (max-width: $screen-small) {
+//         @content;
+//     }
+// }
+// @mixin for-phone-port {
+//     @media (min-width: $screen-small) {
+//         @content;
+//     }
+// }
+// @mixin for-phone-land {
+//     @media (min-width: $screen-phone) {
+//         @content;
+//     }
+// }
+// @mixin for-tablet-land {
+//     @media (min-width: $screen-tablet-land) {
+//         @content;
+//     }
+// }
+// @mixin for-tablet-port {
+//     @media (min-width: $screen-tablet-port) {
+//         @content;
+//     }
+// }
+
+// @mixin for-desktop {
+//     @media (min-width: $screen-desktop) {
+//         @content;
+//     }
+// }
+// @mixin for-large {
+//     @media (min-width: $screen-large) {
+//         @content;
+//     }
+// }

@@ -1,0 +1,37 @@
+@include block(input) {
+  position: relative;
+  &__inner {
+    font: inherit;
+    @extend %field;
+    -webkit-tap-highlight-color: transparent;
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration, 
+    &::-ms-clear, &::-ms-reveal {
+      display: none; width : 0; height: 0;
+    }
+    &:active, &:hover, &:focus {
+      outline: 0;
+      outline-offset: 0;
+    }
+  }
+  &:hover &__inner {
+    background-color: $input--active__background;
+  }
+  &--prefix &__inner{
+    padding-left: $input-parts__padding;
+  }
+  &--suffix &__inner{
+    padding-right: $input-parts__padding;
+  }
+  &__prefix, &__suffix {
+    @extend %field-caret;
+  }
+  &__prefix {
+    left: 0;
+  }
+  &__suffix {
+    right: 0;
+  }
+}

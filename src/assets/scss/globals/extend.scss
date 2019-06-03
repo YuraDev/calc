@@ -1,0 +1,33 @@
+%field {
+    border: 0;
+    margin: 0;
+    width: 100%;
+    display: block;
+    padding: 0 15px;
+    color: $field__color;
+    height: $field__height;
+    -webkit-appearance: none;
+    line-height: $field__height;
+    font-size: $field__font-size;
+    border-radius: $field__radius;
+    background-color: $field__bg;
+    transition: background-color 500ms linear;
+    outline: none;
+}
+
+%field-caret {
+    top: 0;
+    position: absolute;
+    z-index: 1;
+    width: $caret__width;
+    height: auto;
+    text-align: center;
+    font-size: $caret__font-size;
+    line-height: $caret__line-height;
+    cursor: pointer;
+    display: block;
+    color: $caret__color;
+    &:hover {
+        color: $caret--hover__color;
+    }
+}

@@ -1,0 +1,70 @@
+@include block(select) {
+    $this: &;
+    position: relative;
+    &.is-active &-toggle, &:hover &-toggle {
+      background-color: $select--active__bg;
+    }
+    &.is-active &__caret {
+        transform: rotate(0deg);
+    }
+    &-toggle {
+        @extend %field;
+        padding-right: $select-toggle__padding;
+        text-overflow: ellipsis;
+        word-break: break-word;
+        overflow: hidden;
+        white-space: nowrap;
+        #{$this}__caret {
+            @extend %field-caret;
+            right: 0px;
+            transition: transform .3s;
+            transform: rotate(180deg);
+        }
+    }
+    &-dropdown {
+        width: 100%;
+        position: absolute;
+        padding: $dropdown__padding;
+        z-index: 1001;
+        border-radius: $dropdown__radius;
+        background-color: $dropdown__bg;
+        box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
+        :after {
+            bottom: 100%;
+            left: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-color: rgba(136, 183, 213, 0);
+            border-bottom-color: $dropdown__bg;
+            border-width: 5px;
+            margin-left: -5px;
+        }
+    }
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        width: 100%;
+        #{$this}-item {
+            font-size: 14px;
+            padding: 0 10px;
+            border-radius: 4px;
+            position: relative;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: $select__color;
+            height: 34px;
+            line-height: 34px;
+            cursor: pointer;
+            &:hover {
+                background-color: $select-list--hover__bg;
+            }
+        }
+    }
+   
+}

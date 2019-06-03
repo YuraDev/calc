@@ -1,0 +1,73 @@
+@include block(table) {
+    // &__body, &__header {}
+    &__row {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: $table-row__margin-bottom;
+    }
+    &__cell {
+        display: flex;
+        flex-flow: row nowrap;
+        text-overflow: ellipsis;
+        word-break: break-word;
+        overflow: hidden;
+        white-space: nowrap;
+        padding-left: $table-cell__padding; 
+        &:last-child {
+            padding-right: $table-cell__padding;
+        }
+        &.is-center {
+           text-align: center;
+           justify-content: center;
+        }
+        &.is-left {
+            text-align: left;
+            justify-content: left;
+        }
+        &.is-right {
+            text-align: right;
+            justify-content: right;
+        }
+        &.is-justify {
+            text-align: justify;
+        }
+    }
+    &__header &__cell {
+        color: $table-head__color;
+        padding-top: 5px;
+        text-transform: uppercase;
+        font-size: $table-head__font-size;
+    }
+    &__body &__cell {
+        font-size: $table-cell__font-size;
+        padding-top: $table-cell__padding;
+        padding-bottom: $table-cell__padding;
+    }
+ 
+    .cell-icon {
+        margin-right: 10px;
+        font-weight: bold;
+        font-size: 16px;
+        text-transform: uppercase;
+        &.-minus:before {
+            color: #FF9B9B;
+            content: "\2212";
+        }
+        &.-plus:before {
+            color: #AFFF9B;
+            content: "\2b";
+        }
+    }
+    &__body &__row {
+        border-radius: $table-row__radius;
+        background: $table-row__bg;
+        line-height: $table-row__line-height;
+        @include shadow;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

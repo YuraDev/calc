@@ -1,0 +1,107 @@
+$namespace: 'ui';
+
+/* ----------------------------------------------------------
+* btn - button 
+* bg - background
+* элемент__модификатор--свойство = radio-inner--checked__bg
+----------------------------------------------------------- */
+
+
+/* Color
+-------------------------- */
+$dark: #3D474C !default;
+$light: #F4F7FC !default;
+$white: #fff !default;
+$blue: #1C9AF5 !default;
+$blue-1: #F6FAFD !default;
+$blue-2: #E6F2FE !default;
+
+/* Font
+-------------------------- */
+$font-ubuntu: 'Ubuntu', Helvetica, Arial, sans-serif;
+
+/* Body
+-------------------------- */
+$body__color:                           $dark !default;
+$body__background:                      $light !default;
+$body__font-family:                     $font-ubuntu;
+
+
+/* % Field
+-------------------------- */
+$field__height:                         40px;
+$field__font-size:                      16px;
+$field__radius:                         40px;
+$field__color:                          $dark;
+$field__bg:                             $blue-1;
+$field--active__bg:                     $blue-2;
+$field--parts__padding:                 50px;
+
+
+/* % Field - Caret
+-------------------------- */
+$caret__width:                          40px;
+$caret__color:                          $blue;
+$caret--hover__color:                   $blue;
+$caret__font-size:                      14px;
+$caret__line-height:                    $field__height;
+
+/* Input
+-------------------------- */
+$input--active__background:             $field--active__bg;
+$input-parts__padding:                  $field--parts__padding;
+
+
+/* Input Number
+-------------------------- */
+
+
+/* Button
+-------------------------- */
+$button-icon_color:  $blue;
+
+
+
+/* Radio-buttom
+-------------------------- */
+$radio__color:                          $dark;
+$radio__font-size:                      14px;
+$radio--checked__color:                 $dark;
+$radio-inner--checked__border-color:    $blue;
+$radio-inner--checked__background:      $blue;
+$radio-inner__color:                    $blue-2;
+$radio-inner--hover__color:             $blue;
+$radio-inner__background:               $white;
+$radio-inner__size:                     14px;
+$radio-inner__width:                    $radio-inner__size;
+$radio-inner__height:                   $radio-inner__size;
+$radio-inner__border-width:             2px;
+$radio-inner--after__size:              4px;
+$radio-inner--after__width:             $radio-inner--after__size;
+$radio-inner--after__height:            $radio-inner--after__size;
+
+
+/* Field-Select
+-------------------------- */
+$select__color:                         $dark;
+$select--active__bg:                    $field--active__bg;
+$select-list--hover__bg:                $field--active__bg;
+$select-toggle__padding:                $field--parts__padding;
+
+$dropdown__padding:                     10px;
+$dropdown__radius:                      10px;
+$dropdown__bg:                          $white;
+
+
+/* Table
+-------------------------- */
+$table-head__color:                     #79919D;
+$table-head__font-size:                 12px;
+$table-row__margin-bottom:              15px;
+$table-row__radius:                     10px;
+$table-row__bg:                         $white;
+$table-row__line-height:                40px;
+$table-cell__padding:                   15px;
+$table-cell__font-size:                 16px;
+
+
