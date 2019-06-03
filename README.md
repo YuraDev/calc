@@ -1,4 +1,4 @@
-# Martingale Calculator
+# Martingale Calculator ([Demo](https://yuradev.github.io/calc/))
 
 ## Project setup
 ```
