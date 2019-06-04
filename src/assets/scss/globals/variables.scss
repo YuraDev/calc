@@ -1,31 +1,34 @@
 $namespace: 'ui';
 
+
 /* ----------------------------------------------------------
-* btn - button 
-* bg - background
+* btn   - button 
+* bg    - background
 * элемент__модификатор--свойство = radio-inner--checked__bg
 ----------------------------------------------------------- */
 
 
 /* Color
 -------------------------- */
-$dark: #3D474C !default;
-$light: #F4F7FC !default;
-$white: #fff !default;
-$blue: #1C9AF5 !default;
-$blue-1: #F6FAFD !default;
-$blue-2: #E6F2FE !default;
+$dark:                                  #3D474C !default;
+$light:                                 #F4F7FC !default;
+$white:                                 #fff !default;
+$blue:                                  #1C9AF5 !default;
+$blue-1:                                #F6FAFD !default;
+$blue-2:                                #E6F2FE !default;
+
 
 /* Font
 -------------------------- */
-$font-ubuntu: 'Ubuntu', Helvetica, Arial, sans-serif;
+$font-ubuntu:                           'Ubuntu', Helvetica, Arial, sans-serif;
+
 
 /* Break-point
 -------------------------- */
-$screen-sm: 600px !default;
-$screen-md: 900px !default;
-$screen-lg: 1200px !default;
-$screen-xl: 1900px !default;
+$screen-sm:                             600px !default;
+$screen-md:                             900px !default;
+$screen-lg:                             1200px !default;
+$screen-xl:                             1900px !default;
 
 $breakpoints: (
     'xs' : (min-width: 0),
@@ -35,8 +38,9 @@ $breakpoints: (
     'xl' : (min-width: $screen-xl)
 ) !default;
 
-$grid-columns: 24;
-$grid-breakpoints: map-keys($breakpoints);
+$grid-columns:                          24;
+$grid-breakpoints:                      map-keys($breakpoints);
+
 
 /* Body
 -------------------------- */
