@@ -3,6 +3,7 @@
 </template>
 
 <script>
+// colorful
 export default {
   props: {
     name: String

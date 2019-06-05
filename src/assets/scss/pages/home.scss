@@ -8,4 +8,50 @@
           float: right;
       }
     }
+    .statis {
+        text-align: center;
+        &--value {
+            display: inline-block;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            font-size: 40px;
+            line-height: 1.6;
+            // font-weight: 900;
+            text-overflow: ellipsis;
+            word-break: break-word;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+        }
+        &--icon {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            //margin-right: 1em;
+            margin: 0 auto;
+            align-items: center;
+            border-radius: 50%;
+            background-color: #F6FAFD;
+            color: #1C9AF5;
+            font-size: 16px;
+            &.is-green {
+                background-color: rgba(2, 201, 8, 0.1);
+                color: #02c908;
+            }
+            &.is-purple {
+                background-color: rgba(106, 117, 216, 0.1);
+                color: #a279f9;
+            }
+            &.is-red {
+                background-color: #FFDADB;
+                color: #E45558;
+            }
+        }
+        @include res(xs) {
+            font-size: 12px;
+            &--value {
+                font-size: 30px;
+            }
+        }
+    }
 }

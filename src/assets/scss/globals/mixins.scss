@@ -39,7 +39,8 @@
 
 /* Grid Columns
 -------------------------- */
-@mixin  make-grid-columns($infix: '') {
+@mixin  make-grid-columns($name: '') {
+    $infix: if($name == '', $name, '-#{$name}');
     @for $i from 0 through $grid-columns {
         @include block(col#{$infix}-#{$i}) {
             width: (1 / $grid-columns * $i * 100) * 1%;

@@ -16,6 +16,7 @@
         overflow: hidden;
         white-space: nowrap;
         padding-left: $table-cell__padding; 
+  
         &:last-child {
             padding-right: $table-cell__padding;
         }

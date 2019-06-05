@@ -38,7 +38,7 @@
     } @else {
         $name: nth($grid-breakpoints, $i);
         @include res($name, $breakpoints) {
-            @include  make-grid-columns(-#{$name})
+            @include  make-grid-columns($name)
         }
     }
 }

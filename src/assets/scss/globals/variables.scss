@@ -31,7 +31,7 @@ $screen-lg:                             1200px !default;
 $screen-xl:                             1900px !default;
 
 $breakpoints: (
-    'xs' : (min-width: 0),
+    'xs' : (max-width: $screen-sm - 1),
     'sm' : (min-width: $screen-sm),
     'md' : (min-width: $screen-md),
     'lg' : (min-width: $screen-lg),

@@ -25,13 +25,16 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.icon-arrow-up:before {
+.icon-pig:before {
   content: "\e900";
+}
+.icon-hashtag:before {
+  content: "\e905";
 }
 .icon-copy:before {
   content: "\e904";
 }
-.icon-arrow-up1:before {
+.icon-arrow-up:before {
   content: "\e902";
 }
 .icon-minus:before {

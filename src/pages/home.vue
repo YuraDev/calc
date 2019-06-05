@@ -20,6 +20,18 @@
         </ui-form-item>
     </template>
     <div slot="forecast">
+      <ui-row :gutter="20" >
+        <ui-col :span="8" >
+          <mg-statis :value="res.lost" label='Банк' icon="pig"/>
+        </ui-col>
+        <ui-col :span="8" >
+          <mg-statis :value="res.profit" :label='res.profit > 1 ? "Прибыль" : "Убыток"' :icon="res.profit > 1 ? 'plus' : 'minus'" :color="res.profit > 1 ? 'green' : 'red'"/>
+        </ui-col>
+        <ui-col :span="8" >
+          <mg-statis :value="res.count" label='Ставок' icon="hashtag" color="purple"/>
+        </ui-col>
+      </ui-row>
+
       <ui-table :data="forecast">
         <ui-table-field style="width: 10%" class="index" label="#" prop="$index" align="center"/>
         <ui-table-field style="width: 30%" class="bet"  label="Ставка">
@@ -49,9 +61,10 @@
 
 <script>
 import layoutPage from '@/layout/page'
+import mgStatis from "@/components/mg-statis";
 export default {
   name: 'home',
-  components: { layoutPage },
+  components: { layoutPage, mgStatis },
   data: () => ({
     bets: 10,
     balance: 1000,
@@ -95,6 +108,15 @@ export default {
       },
       set (value) {
         this.$set(this, (this.goal === 1 ? 'roi' : 'fixed'), value)
+      }
+    },
+    res () {
+      let count = this.forecast.length
+      let last = this.forecast[count- 1]
+      return {
+        count,
+        lost: parseFloat(last.lost),
+        profit: parseFloat(last.profit)
       }
     },
     forecast () {
