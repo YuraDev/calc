@@ -24,9 +24,11 @@
             width: 100%;
         }
         &--icon {
-            padding: 12px;
-            display: inline-block;
-            line-height: 1;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
             white-space: nowrap;
             text-align: center;
             box-sizing: border-box;
