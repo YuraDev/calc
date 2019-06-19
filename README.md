@@ -1,4 +1,4 @@
-# Martingale Calculator ([Demo](https://yuradev.github.io/calc/))
+# Martingale Calculator Vue.JS ([Demo](https://yuradev.github.io/calc/))
 
 ## Project setup
 ```
